@@ -1,0 +1,35 @@
+<div class="container">
+    <div>
+        <h2>Ajouter un Film :</h2>
+    </div>
+<form>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+        <label>ID Film</label>
+        <input type="text" [(ngModel)]="newFilm.idFilm"
+        name="idFilm" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+        <label> Nom Film </label>
+        <input type="text"[(ngModel)]="newFilm.nomFilm"
+        name="nomFilm" class="form-control">
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+        <label>Prix Film</label>
+        <input type="number"[(ngModel)]="newFilm.prixFilm"
+        name="prixFilm" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+        <label>Date création</label>
+        <input type="date"[(ngModel)]="newFilm.dateCreation"
+        name="dateCreation" class="form-control">
+    </div>
+    <div class="mt-2">
+        <button type="submit" (click)="addFilm()" class="btn btn-success">Ajouter</button>
+        <div>
+            <h3>
+                {{ message }}
+            </h3>
+        </div>
+    </div>
+</form>
+</div>

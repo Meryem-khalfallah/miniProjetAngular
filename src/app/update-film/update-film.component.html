@@ -1,0 +1,35 @@
+<div class="container">
+    <div>
+        <h2>Modifier un Film :</h2>
+    </div>
+    <form>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label> ID Film </label>
+            <input readonly type="text"[(ngModel)]="currentFilm.idFilm"
+            name="idFilm" class="form-control">
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Nom Film</label>
+            <input type="text"[(ngModel)]="currentFilm.nomFilm"
+            name="nomFilm" class="form-control">
+        </div>
+
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Prix Film</label>
+            <input type="number"[(ngModel)]="currentFilm.prixFilm"
+            name="prixFilm" class="form-control">
+        </div>
+        
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Date création</label>
+            <input type="date"[ngModel]="currentFilm.dateCreation | date:'yyyy-MM-dd'"
+            (ngModelChange)=" currentFilm.dateCreation= $event"
+            name="dateCreation" class="form-control">
+        </div>
+        
+        <div class="mt-2">
+            <button type="submit" (click)="updateFilm()" class="btn btn-success">Modifer</button>
+        </div>
+    </form>
+</div>
